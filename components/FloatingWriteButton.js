@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 16,
     right: 16,
-    width: 16,
-    height: 56,
+    width: 56, // 적절한 너비로 조정
+    height: 56, // 적절한 높이로 조정
     borderRadius: 28,
     // iOS 전용 그림자 설정
     shadowColor: '#4d4d4d',
