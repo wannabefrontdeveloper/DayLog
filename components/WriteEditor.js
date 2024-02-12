@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {View, StyleSheet, TextInput} from 'react-native';
 
 function WriteEditor({title, body, onChangeTitle, onChangeBody}) {
+  const bodyRef = useRef();
   return (
     <View style={styles.block}>
       <TextInput
@@ -18,6 +19,7 @@ function WriteEditor({title, body, onChangeTitle, onChangeBody}) {
         textAlignVertical="top"
         onChangeText={onChangeBody}
         value={body}
+        ref={bodyRef}
       />
     </View>
   );
