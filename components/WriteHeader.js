@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Pressable, StyleSheet, View} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {StyleSheet, View} from 'react-native';
+import TransparentCircleButton from './TransparentCircleButton';
 
 function WriteHeader() {
   const navigation = useNavigation();
@@ -9,30 +9,21 @@ function WriteHeader() {
     navigation.pop();
   };
   return (
-    <View Style={styles.block}>
+    <View style={styles.block}>
       <View style={styles.iconButtonWrapper}>
-        <Pressable
-          style={styles.iconButton}
+        <TransparentCircleButton
           onPress={onGoBack}
-          android_ripple={{color: '#ededed'}}>
-          <Icon name="arrow-back" size={24} color="#424242" />
-        </Pressable>
+          name="arrow-back"
+          color="#424242"
+        />
       </View>
       <View style={styles.buttons}>
-        <View style={[styles.iconButtonWrapper, styles.marginRight]}>
-          <Pressable
-            style={[styles.iconButton]}
-            android_ripple={{color: '#ededed'}}>
-            <Icon name="delete-forever" size={24} color="#ef5350" />
-          </Pressable>
-        </View>
-        <View style={styles.iconButtonWrapper}>
-          <Pressable
-            style={styles.iconButton}
-            android_ripple={{color: '#ededed'}}>
-            <Icon name="check" size={24} color="#009688" />
-          </Pressable>
-        </View>
+        <TransparentCircleButton
+          name="delete-forever"
+          color="#ef5350"
+          hasMarginRight
+        />
+        <TransparentCircleButton name="check" color="#009688" />
       </View>
     </View>
   );
