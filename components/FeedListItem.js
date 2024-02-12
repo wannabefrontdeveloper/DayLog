@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#263238',
-    marginbottom: 8,
+    marginBottom: 8,
   },
   body: {
     color: '#37474f',
