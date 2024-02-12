@@ -1,25 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import LogContext from '../contexts/LogContext';
 
 function FeedsScreen() {
+  const value = useContext(LogContext);
   return (
     <View style={styles.block}>
-      <Box>{value => <Text>{value}</Text>}</Box>
+      <Text>{value}</Text>
     </View>
   );
 }
 
-function Box({children}) {
-  return <View style={styles.box}>{children('Hello World')}</View>;
-}
-
-const styles = StyleSheet.create({
-  box: {
-    borderWidth: 2,
-    padding: 16,
-    borderBottomColor: 'black',
-    marginBottom: 16,
-  },
-});
+const styles = StyleSheet.create({});
 
 export default FeedsScreen;
