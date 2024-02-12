@@ -40,6 +40,8 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#263238',
+    fontSize: 18,
+    fontWeight: 'bold',
     marginBottom: 8,
   },
   body: {
