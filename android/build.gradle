@@ -4,7 +4,7 @@ buildscript {
     ext {
         buildToolsVersion = "31.0.0"
         minSdkVersion = 21
-        compileSdkVersion = 31
+        compileSdkVersion = 32
         targetSdkVersion = 31
 
         if (System.properties['os.arch'] == "aarch64") {
@@ -50,7 +50,4 @@ allprojects {
     }
 }
 
-project.ext.vectoricons = [
-    iconFontNames: [ 'MaterialIcons.ttf' ]
-]
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
