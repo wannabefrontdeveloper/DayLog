@@ -11,6 +11,9 @@ function WriteEditor({title, body, onChangeTitle, onChangeBody}) {
         returnKeyType="next"
         onChangeText={onChangeTitle}
         value={title}
+        onSubmitEditing={() => {
+          bodyRef.current.focus();
+        }}
       />
       <TextInput
         placeholder="당신의 오늘을 기록해보세요"
