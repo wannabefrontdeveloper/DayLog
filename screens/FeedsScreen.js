@@ -1,25 +1,16 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import LogContext from '../contexts/LogContext';
 
 function FeedsScreen() {
   return (
     <View style={styles.block}>
-      <Box>
-        <Text>1</Text>
-      </Box>
-      <Box>
-        <Text>2</Text>
-      </Box>
-      <Box>
-        <Text>3</Text>
-      </Box>
+      <Box>{value => <Text>{value}</Text>}</Box>
     </View>
   );
 }
 
 function Box({children}) {
-  return <View style={styles.box}>{children}</View>;
+  return <View style={styles.box}>{children('Hello World')}</View>;
 }
 
 const styles = StyleSheet.create({
