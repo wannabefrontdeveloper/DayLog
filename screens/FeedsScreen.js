@@ -16,7 +16,7 @@ function FeedsScreen() {
   return (
     <View style={styles.block}>
       <FeedList logs={logs} onScrolledToBottom={onScrolledToBottom} />
-      <FloatingWriteButton />
+      <FloatingWriteButton hidden={hidden} />
     </View>
   );
 }
