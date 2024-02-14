@@ -28,7 +28,7 @@ function WriteScreen({route}) {
         title,
         body,
         // 날짜를 문자열로 변환
-        date: new Date().toISOString(),
+        date: date.toISOString(),
       });
     }
     navigation.pop();
