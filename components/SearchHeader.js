@@ -22,7 +22,8 @@ function SearchHeader() {
         autoFocus
       />
       <Pressable
-        style={({pressed}) => [styles.button, pressed && {opacity: 0.5}]}>
+        style={({pressed}) => [styles.button, pressed && {opacity: 0.5}]}
+        onPress={() => onChangeText('')}>
         <Icon name="cancel" size={20} color="#9e9e9e" />
       </Pressable>
     </View>
