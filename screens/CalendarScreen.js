@@ -15,7 +15,7 @@ function CalendarScreen() {
     return acc;
   }, {});
   const filteredLogs = logs.filter(
-    log => format(new Date(log.date), 'yyyy-mm-dd') === selectedDate,
+    log => format(new Date(log.date), 'yyyy-MM-dd') === selectedDate,
   );
   return (
     <FeedList
