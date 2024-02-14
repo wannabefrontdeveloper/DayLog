@@ -17,7 +17,7 @@ function CalendarScreen() {
     <CalendarView
       markedDates={markedDates}
       selectedDate={selectedDate}
-      onSelectedDate={setSelectedDate}
+      onSelectDate={setSelectedDate}
     />
   );
 }
