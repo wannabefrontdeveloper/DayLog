@@ -14,6 +14,9 @@ function CalendarView({markedDates, selectedDate, onSelectDate}) {
     <Calendar
       style={styles.calendar}
       markedDates={markedSelectedDate}
+      onDayPress={day => {
+        onSelectDate(day.dateString);
+      }}
       theme={{
         selectedDayBackgroundColor: '#009688',
         arrowColor: '#009688',
